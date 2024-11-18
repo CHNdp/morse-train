@@ -454,6 +454,7 @@ function createMessage(morse, range) { //生成随机报文
 		var letterNums = $("#messageGroupT").val() * 4;
 	else
 		var letterNums = $("#messageGroupT").val()
+	var groupNums = Math.min(10, $("#messageGroupT").val())
 	var spaceTemp = 0; //for output %4   
 	var showDivText = "";
 	var showDivMorse = [];
@@ -464,7 +465,7 @@ function createMessage(morse, range) { //生成随机报文
 	var $showDiv = $("#showDiv")
 	var $translateDiv = $("#translateDiv")
 	if (spaceTemp == 0) { //第一次生成,添加class
-		for (var i = 0; i < 11; i++) {
+		for (var i = 0; i <= groupNums; i++) {
 			if (i == 0) {
 				word = "准备开始"
 				dotWord = "-...-"
