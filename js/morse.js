@@ -334,6 +334,9 @@ async function play(perTime, perMos) {
 				$('#translateDiv').find('span.row').first().addClass('active')
 				break;
 		case "end":
+			$("#begin").data('isOn', false).html('开始听写');
+			$("#translateDiv span.active").removeClass("active")
+			$("#showDiv span.active").removeClass("active")
 			if ($('#noiseOff')[0].checked)
 				closeBg();
 			break;
